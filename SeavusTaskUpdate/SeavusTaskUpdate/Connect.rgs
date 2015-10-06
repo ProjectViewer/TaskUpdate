@@ -1,0 +1,50 @@
+HKCR
+{
+	SeavusTaskUpdate.Connect.1 = s 'Connect Class'
+	{
+		CLSID = s '{63D3863C-86F8-4EC6-86FE-D9F2F49291F6}'
+	}
+	SeavusTaskUpdate.Connect = s 'Connect Class'
+	{		
+		CurVer = s 'SeavusTaskUpdate.Connect.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {63D3863C-86F8-4EC6-86FE-D9F2F49291F6} = s 'Connect Class'
+		{
+			ProgID = s 'SeavusTaskUpdate.Connect.1'
+			VersionIndependentProgID = s 'SeavusTaskUpdate.Connect'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{C6443BD3-CD01-4A72-ADEF-A8D1B9365BAD}'
+			Version = s '1.0'
+		}
+	}
+}
+HKCU
+{
+    NoRemove Software
+    {
+        NoRemove Microsoft
+        {
+            NoRemove Office
+            {
+                NoRemove MS Project
+                {
+                    NoRemove Addins
+                    {
+                        SeavusTaskUpdate.Connect
+                        {
+                            val Description = s 'Seavus Task Update'
+                            val FriendlyName = s 'Seavus Task Update'
+                            val LoadBehavior = d 3
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

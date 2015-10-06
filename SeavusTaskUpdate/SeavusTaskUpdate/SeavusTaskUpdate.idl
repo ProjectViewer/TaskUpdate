@@ -1,0 +1,34 @@
+// SeavusTaskUpdate.idl : IDL source for SeavusTaskUpdate
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SeavusTaskUpdate.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(BF0E081D-20C9-4961-B1D9-BF0DBBD61236),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IConnect : IDispatch{
+};
+[
+	uuid(C6443BD3-CD01-4A72-ADEF-A8D1B9365BAD),
+	version(1.0),
+]
+library SeavusTaskUpdateLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(63D3863C-86F8-4EC6-86FE-D9F2F49291F6)		
+	]
+	coclass Connect
+	{
+		[default] interface IConnect;
+	};
+};
+
