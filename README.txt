@@ -16,3 +16,6 @@ Notes:
 ------
 * For the AddIn to function properly the ".dll" should be registered and the proper registry keys should be added if they are not generated automatically
 For more information on the manual registry keys entry look into the "SeavusTaskUpdate/SeavusTaskUpdate/connect.rgs" file
+
+
+Task Update is a Plug-in for Microsoft Project which allows Project Managers to accept or reject changes reported by team members using Seavus Project Viewer. To Learn More about Task Update visit https://www.seavusprojectviewer.com/task-update
